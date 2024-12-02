@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import AnalogClock from "./AnalogClock";
+import DigitalClock from "./DigitalClock";
 import WorldMap from "./WorldMap";
 import TimeZoneDisplay from "./TimeZoneDisplay";
 
 const MAJOR_TIMEZONES = [
-  { name: "New York", timezone: "America/New_York", position: "left-24 top-1/3" },
-  { name: "London", timezone: "Europe/London", position: "left-1/3 top-1/4" },
-  { name: "Berlin", timezone: "Europe/Berlin", position: "left-1/2 top-1/4" },
-  { name: "Tokyo", timezone: "Asia/Tokyo", position: "right-24 top-1/3" },
-  { name: "Sydney", timezone: "Australia/Sydney", position: "right-1/4 bottom-1/4" },
+  { name: "New York", timezone: "America/New_York", position: "left-24 top-1/3", color: "#4A90E2" },
+  { name: "London", timezone: "Europe/London", position: "left-1/3 top-1/4", color: "#50E3C2" },
+  { name: "Berlin", timezone: "Europe/Berlin", position: "left-1/2 top-1/4", color: "#F5A623" },
+  { name: "Tokyo", timezone: "Asia/Tokyo", position: "right-24 top-1/3", color: "#D0021B" },
+  { name: "Sydney", timezone: "Australia/Sydney", position: "right-1/4 bottom-1/4", color: "#9013FE" },
 ];
 
 const WorldClock = () => {
@@ -34,7 +34,7 @@ const WorldClock = () => {
             key={tz.name}
             className={`absolute ${tz.position} transform -translate-x-1/2 -translate-y-1/2`}
           >
-            <AnalogClock timezone={tz.timezone} currentTime={currentTime} />
+            <DigitalClock timezone={tz.timezone} currentTime={currentTime} color={tz.color} />
             <TimeZoneDisplay name={tz.name} timezone={tz.timezone} />
           </div>
         ))}
