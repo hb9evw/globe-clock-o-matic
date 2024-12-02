@@ -1,0 +1,45 @@
+import { useEffect, useState } from "react";
+import AnalogClock from "./AnalogClock";
+import WorldMap from "./WorldMap";
+import TimeZoneDisplay from "./TimeZoneDisplay";
+
+const MAJOR_TIMEZONES = [
+  { name: "New York", timezone: "America/New_York", position: "left-24 top-1/3" },
+  { name: "London", timezone: "Europe/London", position: "left-1/3 top-1/4" },
+  { name: "Tokyo", timezone: "Asia/Tokyo", position: "right-24 top-1/3" },
+  { name: "Sydney", timezone: "Australia/Sydney", position: "right-1/4 bottom-1/4" },
+];
+
+const WorldClock = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="container mx-auto">
+      <h1 className="text-4xl font-bold text-worldclock-text mb-8 text-center">
+        World Clock
+      </h1>
+      <div className="relative w-full aspect-[2/1] bg-worldclock-map rounded-lg overflow-hidden">
+        <WorldMap />
+        {MAJOR_TIMEZONES.map((tz) => (
+          <div
+            key={tz.name}
+            className={`absolute ${tz.position} transform -translate-x-1/2 -translate-y-1/2`}
+          >
+            <AnalogClock timezone={tz.timezone} currentTime={currentTime} />
+            <TimeZoneDisplay name={tz.name} timezone={tz.timezone} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default WorldClock;
