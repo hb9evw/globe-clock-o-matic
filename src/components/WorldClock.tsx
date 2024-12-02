@@ -6,6 +6,7 @@ import TimeZoneDisplay from "./TimeZoneDisplay";
 const MAJOR_TIMEZONES = [
   { name: "New York", timezone: "America/New_York", position: "left-24 top-1/3" },
   { name: "London", timezone: "Europe/London", position: "left-1/3 top-1/4" },
+  { name: "Berlin", timezone: "Europe/Berlin", position: "left-1/2 top-1/4" },
   { name: "Tokyo", timezone: "Asia/Tokyo", position: "right-24 top-1/3" },
   { name: "Sydney", timezone: "Australia/Sydney", position: "right-1/4 bottom-1/4" },
 ];
