@@ -8,7 +8,7 @@ const MAJOR_TIMEZONES = [
   { name: "London", timezone: "Europe/London", position: "left-1/3 top-1/4", color: "#50E3C2" },
   { name: "Berlin", timezone: "Europe/Berlin", position: "left-1/2 top-1/4", color: "#F5A623" },
   { name: "Tokyo", timezone: "Asia/Tokyo", position: "right-24 top-1/3", color: "#D0021B" },
-  { name: "Sydney", timezone: "Australia/Sydney", position: "right-1/4 bottom-1/4", color: "#9013FE" },
+  { name: "Sydney", timezone: "Australia/Sydney", position: "right-12 bottom-12", color: "#9013FE" },
 ];
 
 const WorldClock = () => {
