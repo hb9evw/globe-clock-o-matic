@@ -9,7 +9,7 @@ const MAJOR_TIMEZONES = [
   { name: "Berlin", timezone: "Europe/Berlin", position: "left-1/2 top-1/4", color: "#F5A623" },
   { name: "Tokyo", timezone: "Asia/Tokyo", position: "right-24 top-1/3", color: "#D0021B" },
   { name: "Sydney", timezone: "Australia/Sydney", position: "right-12 bottom-12", color: "#9013FE" },
-  { name: "Buenos Aires", timezone: "America/Argentina/Buenos_Aires", position: "left-1/3 bottom-1/4", color: "#33C3F0" },
+  { name: "Buenos Aires", timezone: "America/Argentina/Buenos_Aires", position: "left-1/3 bottom-12", color: "#33C3F0" },
 ];
 
 const WorldClock = () => {
