@@ -5,7 +5,7 @@ import TimeZoneDisplay from "./TimeZoneDisplay";
 
 const MAJOR_TIMEZONES = [
   { name: "New York", timezone: "America/New_York", position: "left-48 top-1/3", color: "#4A90E2" },
-  { name: "London", timezone: "Europe/London", position: "left-1/3 top-1/4", color: "#50E3C2" },
+  { name: "London", timezone: "Europe/London", position: "left-1/2 top-1/4", color: "#50E3C2" },
   { name: "Berlin", timezone: "Europe/Berlin", position: "left-1/2 top-1/4", color: "#F5A623" },
   { name: "Tokyo", timezone: "Asia/Tokyo", position: "right-24 top-1/3", color: "#D0021B" },
   { name: "Sydney", timezone: "Australia/Sydney", position: "right-12 bottom-12", color: "#9013FE" },
