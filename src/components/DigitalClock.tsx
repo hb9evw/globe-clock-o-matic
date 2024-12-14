@@ -24,8 +24,8 @@ const DigitalClock = ({ timezone, currentTime, color }: DigitalClockProps) => {
   };
 
   return (
-    <div className="w-32 h-16 rounded-lg shadow-lg flex items-center justify-center" style={{ backgroundColor: color }}>
-      <div className="text-white font-mono text-lg font-bold">
+    <div className="w-24 h-12 rounded-lg shadow-lg flex items-center justify-center" style={{ backgroundColor: color }}>
+      <div className="text-white font-mono text-sm font-bold">
         {formatTime(time)}
       </div>
     </div>
