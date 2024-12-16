@@ -10,6 +10,7 @@ const MAJOR_TIMEZONES = [
   { name: "Tokyo", timezone: "Asia/Tokyo", position: "right-24 top-1/3", color: "#D0021B" },
   { name: "Sydney", timezone: "Australia/Sydney", position: "right-12 bottom-12", color: "#9013FE" },
   { name: "Buenos Aires", timezone: "America/Argentina/Buenos_Aires", position: "left-1/3 bottom-12", color: "#33C3F0" },
+  { name: "Tashkent", timezone: "Asia/Tashkent", position: "left-2/3 top-1/3", color: "#7C3AED" },
 ];
 
 const WorldClock = () => {
